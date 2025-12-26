@@ -1,0 +1,3 @@
+import CardLayoutWithSidebarsNormalScrollComponent from './CardLayoutWithSidebarsNormalScrollComponent';
+
+export default CardLayoutWithSidebarsNormalScrollComponent;

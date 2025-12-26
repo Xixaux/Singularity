@@ -1,0 +1,12 @@
+{
+  "notifications": [
+    { "id": "1", "type": "alert", "message": "Chart data saved successfully", "variant": "success", "dismissible": true },
+    { "id": "2", "type": "alert", "message": "Error loading table data", "variant": "error", "dismissible": true },
+    { "id": "3", "type": "alert", "message": "Low disk space warning", "variant": "warning", "dismissible": true },
+    { "id": "4", "type": "badge", "message": "3 unread notifications", "variant": "info" },
+    { "id": "5", "type": "toast", "message": "New visitor data received", "variant": "info" },
+    { "id": "6", "type": "feed", "message": "User updated chart settings", "variant": "info" },
+    { "id": "7", "type": "modal", "message": "Confirm deletion of chart data?", "variant": "warning" },
+    { "id": "8", "type": "push", "message": "New data available", "variant": "info" }
+  ]
+}

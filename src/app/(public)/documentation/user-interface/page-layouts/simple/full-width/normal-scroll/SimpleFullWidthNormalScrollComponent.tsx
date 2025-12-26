@@ -1,0 +1,34 @@
+'use client';
+
+import { styled } from '@mui/material/styles';
+import SingularitySimpleLayout from '@singularity/core/SingularitySimpleLayout';
+import DemoHeader from '../../../components/DemoHeader';
+import DemoContent from '../../../components/DemoContent';
+
+const Root = styled(SingularitySimpleLayout)(({ theme }) => ({
+    '& .SingularitySimpleLayout-header': {
+        backgroundColor: theme.vars.palette.background.paper,
+        borderBottomWidth: 1,
+        borderStyle: 'solid',
+        borderColor: theme.vars.palette.divider
+    },
+    '& .SingularitySimpleLayout-toolbar': {},
+    '& .SingularitySimpleLayout-content': {},
+    '& .SingularitySimpleLayout-sidebarHeader': {},
+    '& .SingularitySimpleLayout-sidebarContent': {}
+}));
+
+/**
+ * The SimpleFullWidthNormalScroll page component.
+ */
+function SimpleFullWidthNormalScrollComponent() {
+    return (
+        <Root
+            header={<DemoHeader />}
+            content={<DemoContent />}
+            scroll="normal"
+        />
+    );
+}
+
+export default SimpleFullWidthNormalScrollComponent;

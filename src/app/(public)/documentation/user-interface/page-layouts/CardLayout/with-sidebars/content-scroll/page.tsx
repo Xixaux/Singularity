@@ -1,0 +1,3 @@
+import CardLayoutWithSidebarsContentScrollComponent from './CardLayoutWithSidebarsContentScrollComponent';
+
+export default CardLayoutWithSidebarsContentScrollComponent;

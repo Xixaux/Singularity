@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.ProseMirror {
+  min-height: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 8px;
+  font-family: 'Inter', sans-serif;
+}
+.ProseMirror:focus {
+  outline: none;
+  border-color: #1976d2;
+}

@@ -1,0 +1,71 @@
+body #singularity-splash-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #232314;
+    color: #f0f0f0;
+    z-index: 999999;
+    pointer-events: none;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body #singularity-splash-screen img {
+    width: 120px;
+    max-width: 120px;
+}
+
+#spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    width: 60px; /* Size of the circular loader */
+    height: 60px;
+    position: relative;
+}
+
+#spinner > div {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 6px solid transparent;
+    border-top-color: #7fe3ff; /* Progress color */
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite; /* Continuous rotation */
+}
+
+#spinner > div:nth-child(2) {
+    border: 6px solid transparent;
+    border-bottom-color: #7fe3ff;
+    animation: spin 1.5s linear infinite reverse; /* Counter-rotation for dynamic effect */
+}
+
+#spinner > div:nth-child(3) {
+    width: 80%;
+    height: 80%;
+    border: 4px solid #f0f0f0; /* Border color for inner ring */
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite; /* Pulsing effect */
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.8); opacity: 0.7; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.8); opacity: 0.7; }
+}

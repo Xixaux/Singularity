@@ -1,0 +1,143 @@
+'use client';
+
+import SingularityPageCardLayout from '@singularity/core/SingularityPageCardLayout';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import { motion } from 'motion/react';
+import { SyntheticEvent, useState } from 'react';
+import { useParams } from 'next/navigation';
+import Link from '@singularity/core/Link';
+import useThemeMediaQuery from '@singularity/hooks/useThemeMediaQuery';
+import SingularityLoading from '@singularity/core/SingularityLoading';
+import PageBreadcrumb from 'src/components/PageBreadcrumb';
+import SingularityTabs from 'src/components/tabs/SingularityTabs';
+import SingularityTab from 'src/components/tabs/SingularityTab';
+import InvoiceTab from './tabs/invoice/InvoiceTab';
+import DetailsTab from './tabs/details/DetailsTab';
+import ProductsTab from './tabs/products/ProductsTab';
+import { useGetECommerceOrderQuery } from '../../ECommerceApi';
+import { useTheme } from '@mui/material/styles';
+
+function Order() {
+    const routeParams = useParams<{ orderId: string }>();
+    const { orderId } = routeParams;
+    const { data: order, isLoading, isError } = useGetECommerceOrderQuery(orderId, {
+        skip: !orderId
+    });
+    const isMobile = useThemeMediaQuery((_theme) => _theme.breakpoints.down('lg'));
+    const [tabValue, setTabValue] = useState('details');
+    const theme = useTheme();
+
+    function handleTabChange(event: SyntheticEvent, value: string) {
+        setTabValue(value);
+    }
+
+    if (isLoading) {
+        return <SingularityLoading />;
+    }
+
+    if (isError) {
+        return (
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { delay: 0.1 } }}
+                className="flex flex-col flex-1 items-center justify-center h-full"
+            >
+                <Typography
+                    color="text.secondary"
+                    variant="h5"
+                >
+                    There is no such order!
+                </Typography>
+                <Button
+                    className="mt-6"
+                    component={Link}
+                    variant="outlined"
+                    to="/apps/e-commerce/orders"
+                    color="inherit"
+                >
+                    Go to Orders Page
+                </Button>
+            </motion.div>
+        );
+    }
+
+    return (
+        <SingularityPageCardLayout
+            header={
+                order && (
+                    <div className="flex flex-1 flex-col py-8">
+                        <motion.div
+                            initial={{ x: 20, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1, transition: { delay: 0.3 } }}
+                        >
+                            <PageBreadcrumb className="mb-2" />
+                        </motion.div>
+                        <motion.div
+                            initial={{ x: -20, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1, transition: { delay: 0.3 } }}
+                            className="flex flex-col min-w-0"
+                        >
+                            <Typography className="text-2xl truncate font-semibold">
+                                {`Order ${order.reference}`}
+                            </Typography>
+                            <Typography
+                                variant="caption"
+                                className="font-medium"
+                            >
+                                {`From ${order.customer.firstName} ${order.customer.lastName}`}
+                            </Typography>
+                        </motion.div>
+                    </div>
+                )
+            }
+            content={
+                <div className="p-4 sm:p-6 w-full">
+                    <SingularityTabs
+                        className="mb-8"
+                        value={tabValue}
+                        onChange={handleTabChange}
+                    >
+                        <SingularityTab
+                            value="details"
+                            label="Order Details"
+                            sx={{
+                                backgroundColor: '#6BC9F7',
+                                color: theme.palette.common.white,
+                                fontSize: '13px'
+                            }}
+                        />
+                        <SingularityTab
+                            value="products"
+                            label="Products"
+                            sx={{
+                                backgroundColor: '#6BC9F7',
+                                color: theme.palette.common.white,
+                                fontSize: '13px'
+                            }}
+                        />
+                        <SingularityTab
+                            value="invoice"
+                            label="Invoice"
+                            sx={{
+                                backgroundColor: '#6BC9F7',
+                                color: theme.palette.common.white,
+                                fontSize: '13px'
+                            }}
+                        />
+                    </SingularityTabs>
+                    {order && (
+                        <>
+                            {tabValue === 'details' && <DetailsTab />}
+                            {tabValue === 'products' && <ProductsTab />}
+                            {tabValue === 'invoice' && <InvoiceTab order={order} />}
+                        </>
+                    )}
+                </div>
+            }
+            scroll={isMobile ? 'normal' : 'content'}
+        />
+    );
+}
+
+export default Order;

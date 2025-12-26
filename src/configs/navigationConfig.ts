@@ -1,0 +1,627 @@
+'use client';
+
+import i18n from '@i18n';
+import { SingularityNavItemType } from '@singularity/core/SingularityNavigation/types/SingularityNavItemType';
+import en from './navigation-i18n/en';
+import es from './navigation-i18n/es';
+import fr from './navigation-i18n/fr';
+import SettingsAppNavigation from '../app/(control-panel)/apps/settings/SettingsAppNavigation';
+
+i18n.addResourceBundle('en', 'navigation', en);
+i18n.addResourceBundle('es', 'navigation', es);
+i18n.addResourceBundle('fr', 'navigation', fr);
+
+const navigationConfig: SingularityNavItemType[] = [
+  {
+    id: 'Dashboards',
+    title: 'Dashboards',
+    subtitle: 'Modern dashboards',
+    type: 'group',
+    icon: 'material-outlined:AssessmentOutlined',
+    translate: 'DASHBOARDS',
+    children: [
+      {
+        id: 'control-panel',
+        title: 'Control Panel',
+        type: 'item',
+        icon: 'material-outlined:TuneOutlined',
+        url: '/dashboards/control-panel',
+      },
+      {
+        id: 'analytics',
+        title: 'Analytics',
+        type: 'item',
+        icon: 'material-outlined:AssessmentOutlined',
+        url: '/dashboards/analytics',
+      },
+      {
+        id: 'financial',
+        title: 'Financial',
+        type: 'item',
+        icon: 'material-outlined:AccountBalanceWalletOutlined',
+        url: '/dashboards/financial',
+      },
+      {
+        id: 'crypto-wallet',
+        title: 'Crypto Wallet',
+        type: 'item',
+        icon: 'material-outlined:PaidOutlined',
+        url: '/dashboards/crypto',
+      },
+      {
+        id: 'user-management',
+        title: 'User Management',
+        type: 'collapse',
+        icon: 'material-outlined:AdminPanelSettingsOutlined',
+        children: [
+          {
+            id: 'users',
+            title: 'Users',
+            type: 'item',
+            icon: 'material-outlined:GroupOutlined',
+            url: '/dashboards/user-management/users',
+            end: true,
+          },
+          {
+            id: 'roles',
+            title: 'Roles',
+            type: 'item',
+            icon: 'material-outlined:AssignmentIndOutlined',
+            url: '/dashboards/user-management/roles',
+            end: true,
+          },
+          {
+            id: 'permissions',
+            title: 'Permissions',
+            type: 'item',
+            icon: 'material-outlined:LockOpenOutlined',
+            url: '/dashboards/user-management/permissions',
+            end: true,
+          },
+          {
+            id: 'logs',
+            title: 'Logs',
+            type: 'item',
+            icon: 'material-outlined:HistoryOutlined',
+            url: '/dashboards/user-management/logs',
+            end: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'Applications',
+    title: 'Applications',
+    subtitle: 'Custom apps right away',
+    type: 'group',
+    icon: 'material-outlined:AssessmentOutlined',
+    translate: 'APPLICATIONS',
+    children: [
+      {
+        id: 'calendar',
+        title: 'Calendar',
+        subtitle: '3 upcoming events',
+        type: 'item',
+        icon: 'material-outlined:CalendarTodayOutlined',
+        url: '/apps/calendar',
+        translate: 'CALENDAR',
+      },
+      {
+        id: 'contacts',
+        title: 'Contacts',
+        type: 'item',
+        icon: 'material-outlined:ContactsOutlined',
+        url: '/apps/contacts',
+        translate: 'CONTACTS',
+      },
+      {
+        id: 'messenger',
+        title: 'Messenger',
+        type: 'item',
+        icon: 'material-outlined:ChatOutlined',
+        url: '/apps/messenger',
+        translate: 'MESSENGER',
+        badge: {
+          title: '4',
+          classes: 'px-8 bg-pink-600 text-white rounded-full',
+        },
+      },
+      {
+        id: 'e-commerce',
+        title: 'ECommerce',
+        type: 'collapse',
+        icon: 'material-outlined:ShoppingCartOutlined',
+        translate: 'ECOMMERCE',
+        children: [
+          {
+            id: 'products',
+            title: 'Products',
+            type: 'item',
+            url: '/apps/e-commerce/products',
+            end: true,
+          },
+          {
+            id: 'product-detail',
+            title: 'Product Detail',
+            type: 'item',
+            url: '/apps/e-commerce/products/1/crystal-waters-canvas-print',
+          },
+          {
+            id: 'new-product',
+            title: 'New Product',
+            type: 'item',
+            url: '/apps/e-commerce/products/new',
+          },
+          {
+            id: 'orders',
+            title: 'Orders',
+            type: 'item',
+            url: '/apps/e-commerce/orders',
+            end: true,
+          },
+          {
+            id: 'order-detail',
+            title: 'Order Detail',
+            type: 'item',
+            url: '/apps/e-commerce/orders/1',
+          },
+        ],
+      },
+      {
+        id: 'file-manager',
+        title: 'File Manager',
+        type: 'item',
+        icon: 'material-outlined:FolderOutlined',
+        url: '/apps/file-manager',
+        end: true,
+        translate: 'FILE_MANAGER',
+      },
+      {
+        id: 'learning',
+        title: 'Learning',
+        type: 'item',
+        icon: 'material-outlined:SchoolOutlined',
+        url: '/apps/learning',
+        translate: 'LEARNING',
+      },
+      {
+        id: 'help-center',
+        title: 'Help Center',
+        type: 'collapse',
+        icon: 'material-outlined:HelpOutlineOutlined',
+        url: '/apps/help-center',
+        children: [
+          {
+            id: 'home',
+            title: 'Home',
+            type: 'item',
+            icon: 'material-outlined:HomeOutlined',
+            url: '/apps/help-center',
+            end: true,
+          },
+          {
+            id: 'faqs',
+            title: 'FAQs',
+            type: 'item',
+            icon: 'material-outlined:QuestionAnswerOutlined',
+            url: '/apps/help-center/faqs',
+          },
+          {
+            id: 'guides',
+            title: 'Guides',
+            type: 'item',
+            icon: 'material-outlined:MenuBookOutlined',
+            url: '/apps/help-center/guides',
+          },
+          {
+            id: 'support',
+            title: 'Support',
+            type: 'item',
+            icon: 'material-outlined:SupportAgentOutlined',
+            url: '/apps/help-center/support',
+          },
+        ],
+      },
+      {
+        id: 'mailbox',
+        title: 'Mailbox',
+        type: 'item',
+        icon: 'material-outlined:EmailOutlined',
+        url: '/apps/mailbox/folders/inbox',
+        translate: 'MAIL',
+        badge: {
+          title: '27',
+          classes: 'px-8 bg-pink-600 text-white rounded-full',
+        },
+      },
+      {
+        id: 'tasks',
+        title: 'Tasks',
+        subtitle: '12 remaining tasks',
+        type: 'item',
+        icon: 'material-outlined:TaskOutlined',
+        url: '/apps/tasks',
+        translate: 'TASKS',
+      },
+      {
+        id: 'scrumboard',
+        title: 'Scrumboard',
+        type: 'item',
+        icon: 'material-outlined:ViewKanbanOutlined',
+        url: '/apps/scrumboard',
+        translate: 'SCRUMBOARD',
+      },
+      {
+        id: 'notes',
+        title: 'Notes',
+        type: 'item',
+        icon: 'material-outlined:FormatListBulletedOutlined',
+        url: '/apps/notes',
+        translate: 'NOTES',
+      },
+      {
+        id: 'notifications',
+        title: 'Notifications',
+        type: 'item',
+        icon: 'material-outlined:NotificationsOutlined',
+        url: '/apps/notifications',
+      },
+      {
+        id: 'profile',
+        title: 'Social Media',
+        type: 'item',
+        icon: 'material-outlined:PersonOutlined',
+        url: '/apps/profile',
+      },
+      {
+        id: 'settings',
+        title: 'Settings',
+        type: 'item',
+        icon: 'material-outlined:SettingsOutlined',
+        url: '/apps/settings',
+      },
+    ],
+  },
+  {
+    id: 'Pages',
+    title: 'Pages',
+    subtitle: 'Modern page designs',
+    type: 'group',
+    icon: 'material-outlined:WebOutlined',
+    children: [
+      {
+        id: 'activities',
+        title: 'Activities',
+        type: 'item',
+        icon: 'material-outlined:EventOutlined',
+        url: '/pages/activities',
+      },
+      {
+        id: 'coming-soon',
+        title: 'Coming Soon',
+        type: 'collapse',
+        icon: 'material-outlined:HourglassEmptyOutlined',
+        url: '/pages/coming-soon',
+        children: [
+          {
+            id: 'classic',
+            title: 'Classic',
+            type: 'item',
+            url: '/pages/coming-soon/classic',
+          },
+          {
+            id: 'modern',
+            title: 'Modern',
+            type: 'item',
+            url: '/pages/coming-soon/modern',
+          },
+          {
+            id: 'split-screen',
+            title: 'Split Screen',
+            type: 'item',
+            url: '/pages/coming-soon/split-screen',
+          },
+          {
+            id: 'full-screen',
+            title: 'Full Screen',
+            type: 'item',
+            url: '/pages/coming-soon/full-screen',
+          },
+        ],
+      },
+      {
+        id: 'authentication',
+        title: 'Authentication',
+        type: 'collapse',
+        icon: 'material-outlined:LockOutlined',
+        children: [
+          {
+            id: 'sign-in',
+            title: 'Sign in',
+            type: 'collapse',
+            children: [
+              {
+                id: 'sign-in-classic',
+                title: 'Classic',
+                type: 'item',
+                url: '/pages/authentication/sign-in/classic',
+              },
+              {
+                id: 'sign-in-split-screen',
+                title: 'Split Screen',
+                type: 'item',
+                url: '/pages/authentication/sign-in/split-screen',
+              },
+              {
+                id: 'sign-in-full-screen',
+                title: 'Full Screen',
+                type: 'item',
+                url: '/pages/authentication/sign-in/full-screen',
+              },
+            ],
+          },
+          {
+            id: 'sign-up',
+            title: 'Sign up',
+            type: 'collapse',
+            children: [
+              {
+                id: 'sign-up-classic',
+                title: 'Classic',
+                type: 'item',
+                url: '/pages/authentication/sign-up/classic',
+              },
+              {
+                id: 'sign-up-split-screen',
+                title: 'Split Screen',
+                type: 'item',
+                url: '/pages/authentication/sign-up/split-screen',
+              },
+              {
+                id: 'sign-up-full-screen',
+                title: 'Full Screen',
+                type: 'item',
+                url: '/pages/authentication/sign-up/full-screen',
+              },
+            ],
+          },
+          {
+            id: 'sign-out',
+            title: 'Sign out',
+            type: 'collapse',
+            children: [
+              {
+                id: 'sign-out-classic',
+                title: 'Classic',
+                type: 'item',
+                url: '/pages/authentication/sign-out/classic',
+              },
+              {
+                id: 'sign-out-split-screen',
+                title: 'Split Screen',
+                type: 'item',
+                url: '/pages/authentication/sign-out/split-screen',
+              },
+              {
+                id: 'sign-out-full-screen',
+                title: 'Full Screen',
+                type: 'item',
+                url: '/pages/authentication/sign-out/full-screen',
+              },
+            ],
+          },
+          {
+            id: 'forgot-password',
+            title: 'Forgot password',
+            type: 'collapse',
+            children: [
+              {
+                id: 'forgot-password-classic',
+                title: 'Classic',
+                type: 'item',
+                url: '/pages/authentication/forgot-password/classic',
+              },
+              {
+                id: 'forgot-password-split-screen',
+                title: 'Split Screen',
+                type: 'item',
+                url: '/pages/authentication/forgot-password/split-screen',
+              },
+              {
+                id: 'forgot-password-full-screen',
+                title: 'Full Screen',
+                type: 'item',
+                url: '/pages/authentication/forgot-password/full-screen',
+              },
+            ],
+          },
+          {
+            id: 'reset-password',
+            title: 'Reset password',
+            type: 'collapse',
+            children: [
+              {
+                id: 'reset-password-classic',
+                title: 'Classic',
+                type: 'item',
+                url: '/pages/authentication/reset-password/classic',
+              },
+              {
+                id: 'reset-password-split-screen',
+                title: 'Split Screen',
+                type: 'item',
+                url: '/pages/authentication/reset-password/split-screen',
+              },
+              {
+                id: 'reset-password-full-screen',
+                title: 'Full Screen',
+                type: 'item',
+                url: '/pages/authentication/reset-password/full-screen',
+              },
+            ],
+          },
+          {
+            id: 'unlock-session',
+            title: 'Unlock session',
+            type: 'collapse',
+            children: [
+              {
+                id: 'unlock-session-classic',
+                title: 'Classic',
+                type: 'item',
+                url: '/pages/authentication/unlock-session/classic',
+              },
+              {
+                id: 'unlock-session-split-screen',
+                title: 'Split Screen',
+                type: 'item',
+                url: '/pages/authentication/unlock-session/split-screen',
+              },
+              {
+                id: 'unlock-session-full-screen',
+                title: 'Full Screen',
+                type: 'item',
+                url: '/pages/authentication/unlock-session/full-screen',
+              },
+            ],
+          },
+          {
+            id: 'confirmation-required',
+            title: 'Confirmation required',
+            type: 'collapse',
+            children: [
+              {
+                id: 'confirmation-required-classic',
+                title: 'Classic',
+                type: 'item',
+                url: '/pages/authentication/confirmation-required/classic',
+              },
+              {
+                id: 'confirmation-required-split-screen',
+                title: 'Split Screen',
+                type: 'item',
+                url: '/pages/authentication/confirmation-required/split-screen',
+              },
+              {
+                id: 'confirmation-required-full-screen',
+                title: 'Full Screen',
+                type: 'item',
+                url: '/pages/authentication/confirmation-required/full-screen',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 'error-types',
+        title: 'Error Types',
+        type: 'collapse',
+        icon: 'material-outlined:ErrorOutlineOutlined',
+        children: [
+          {
+            id: '401',
+            title: '401',
+            type: 'item',
+            url: '/pages/error/401',
+          },
+          {
+            id: '404',
+            title: '404',
+            type: 'item',
+            url: '/pages/error/404',
+          },
+          {
+            id: '500',
+            title: '500',
+            type: 'item',
+            url: '/pages/error/500',
+          },
+        ],
+      },
+      {
+        id: 'invoice',
+        title: 'Invoice',
+        type: 'collapse',
+        icon: 'material-outlined:ReceiptOutlined',
+        children: [
+          {
+            id: 'compact',
+            title: 'Minimalist',
+            type: 'item',
+            url: '/pages/invoice/minimalist',
+          },
+          {
+            id: 'modern',
+            title: 'Modern',
+            type: 'item',
+            url: '/pages/invoice/modern',
+          },
+        ],
+      },
+      {
+        id: 'pricing',
+        title: 'Pricing',
+        type: 'collapse',
+        icon: 'material-outlined:AttachMoneyOutlined',
+        children: [
+          {
+            id: 'standard',
+            title: 'Standard',
+            type: 'item',
+            url: '/pages/pricing/modern',
+          },
+          {
+            id: 'minimalist',
+            title: 'Minimalist',
+            type: 'item',
+            url: '/pages/pricing/minimalist',
+          },
+          {
+            id: 'single-product',
+            title: 'Single Product',
+            type: 'item',
+            url: '/pages/pricing/single',
+          },
+          {
+            id: 'table-features',
+            title: 'Table Features',
+            type: 'item',
+            url: '/pages/pricing/table',
+          },
+        ],
+      },
+      {
+        id: 'search',
+        title: 'Search',
+        type: 'collapse',
+        icon: 'material-outlined:SearchOutlined',
+        children: [
+          {
+            id: 'classic-search',
+            title: 'Classic Search',
+            type: 'item',
+            icon: 'material-outlined:SearchOutlined',
+            url: '/pages/search/classic',
+          },
+          {
+            id: 'modern-search',
+            title: 'Modern Search',
+            type: 'item',
+            icon: 'material-outlined:ImageSearchOutlined',
+            url: '/pages/search/modern',
+          },
+        ],
+      },
+      {
+        id: 'maintenance',
+        title: 'Maintenance',
+        type: 'item',
+        icon: 'material-outlined:BuildOutlined',
+        url: '/pages/maintenance',
+      },
+    ],
+  },
+];
+
+export default navigationConfig;

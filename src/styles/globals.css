@@ -1,0 +1,532 @@
+body:not(.dark) .ecommerce-products-table .MuiTable-root,
+body:not(.dark) .ecommerce-products-table .MuiTableCell-root,
+body:not(.dark) .ecommerce-products-table .MuiTypography-root {
+  background-color: var(--mui-palette-background-paper);
+  color: #63677C;
+}
+body.dark .ecommerce-products-table .MuiTable-root,
+body.dark .ecommerce-products-table .MuiTableCell-root,
+body.dark .ecommerce-products-table .MuiTypography-root {
+  background-color: var(--mui-palette-background-paper);
+  color: #FFFFFF;
+}
+
+body:not(.dark) .error-main {
+  background-color: var(--mui-palette-error-main);
+}
+body.dark .error-main {
+  background-color: var(--mui-palette-error-main);
+}
+body:not(.dark) .warning-main {
+  background-color: var(--mui-palette-warning-main);
+}
+body.dark .warning-main {
+  background-color: var(--mui-palette-warning-main);
+}
+body:not(.dark) .success-main {
+  background-color: var(--mui-palette-success-main);
+}
+body.dark .success-main {
+  background-color: var(--mui-palette-success-main);
+}
+
+body:not(.dark) .ecommerce-products-table .MuiTablePagination-root,
+body:not(.dark) .ecommerce-products-table .MuiToolbar-root {
+  background-color: var(--mui-palette-background-paper);
+  color: #63677C;
+}
+body.dark .ecommerce-products-table .MuiTablePagination-root,
+body.dark .ecommerce-products-table .MuiToolbar-root {
+  background-color: var(--mui-palette-background-paper);
+  color: #FFFFFF;
+}
+
+body:not(.dark) .ecommerce-products-table .MuiChip-root,
+body:not(.dark) .ecommerce-products-table .MuiChip-label {
+  background-color: var(--mui-palette-primary-light);
+  color: #63677C;
+}
+body.dark .ecommerce-products-table .MuiChip-root,
+body.dark .ecommerce-products-table .MuiChip-label {
+  background-color: var(--mui-palette-primary-light);
+  color: #FFFFFF;
+}
+
+body:not(.dark) .main-content {
+  background-color: var(--mui-palette-background-default);
+  color: var(--mui-palette-text-primary);
+}
+body.dark .main-content {
+  background-color: var(--mui-palette-background-default);
+  color: var(--mui-palette-text-primary);
+}
+
+body:not(.dark) {
+  background-color: var(--mui-palette-background-default);
+}
+body.dark {
+  background-color: var(--mui-palette-background-default);
+}
+
+form label {
+  z-index: 99;
+}
+
+body.no-animate *,
+body.no-animate *::before,
+body.no-animate *::after {
+  transition: none;
+  animation: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+:focus {
+  outline-color: transparent;
+}
+
+.fc-scrollgrid-section-liquid {
+  height: 1px;
+}
+
+body:not(.dark) .products-tab-container {
+  background-color: var(--mui-palette-grey-200);
+}
+body.dark .products-tab-container {
+  background-color: var(--mui-palette-background-default);
+}
+
+body:not(.dark) .user-menu-popover .MuiMenuItem-root {
+  background-color: transparent;
+  color: var(--mui-palette-text-primary);
+}
+body.dark .user-menu-popover .MuiMenuItem-root {
+  background-color: transparent;
+  color: var(--mui-palette-text-primary);
+}
+body:not(.dark) .user-menu-popover .MuiMenuItem-root:hover {
+  background-color: var(--mui-palette-secondary-main);
+}
+body.dark .user-menu-popover .MuiMenuItem-root:hover {
+  background-color: var(--mui-palette-secondary-main);
+}
+body:not(.dark) .user-menu-popover .MuiListItemText-primary {
+  color: var(--mui-palette-text-primary);
+}
+body.dark .user-menu-popover .MuiListItemText-primary {
+  color: var(--mui-palette-text-primary);
+}
+body:not(.dark) .user-menu-popover .MuiListItemIcon-root,
+body:not(.dark) .user-menu-popover .SingularitySvgIcon,
+body:not(.dark) .user-menu-popover .SingularitySvgIcon svg {
+  color: var(--mui-palette-text-primary);
+  fill: var(--mui-palette-text-primary);
+  stroke: var(--mui-palette-text-primary);
+}
+body.dark .user-menu-popover .MuiListItemIcon-root,
+body.dark .user-menu-popover .SingularitySvgIcon,
+body.dark .user-menu-popover .SingularitySvgIcon svg {
+  color: var(--mui-palette-text-primary);
+  fill: var(--mui-palette-text-primary);
+  stroke: var(--mui-palette-text-primary);
+}
+
+.ps,
+.ps__rail-y,
+.ps__rail-x {
+}
+
+.ps > .ps__rail-y,
+.ps > .ps__rail-x {
+  z-index: 99;
+}
+
+[dir='rtl'] .ps__thumb-y {
+  right: auto;
+  left: 2px;
+}
+
+[dir='rtl'] .ps > .ps__rail-y {
+  left: 0;
+  right: auto;
+}
+
+a[role=button] {
+  text-decoration: none;
+}
+
+[role='tooltip'] {
+  z-index: 9999;
+}
+
+.MuiModal-root {
+  z-index: 9999;
+}
+
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-family: 'Inter', 'Roboto', 'Poppins', 'Arial', sans-serif;
+  background-color: var(--mui-palette-background-default);
+}
+
+html.dark {
+  background-color: var(--mui-palette-background-default);
+}
+
+body {
+  line-height: 1.3;
+  font-size: 0.8125rem;
+  overflow-x: hidden;
+  font-feature-settings: 'salt';
+  color: var(--mui-palette-text-primary);
+  background-color: var(--mui-palette-background-default);
+}
+
+body.dark {
+  color: var(--mui-palette-text-primary);
+  background-color: var(--mui-palette-background-default);
+}
+
+body:not(.dark) .navigation {
+  background-color: var(--mui-palette-NavigationBar-background);
+}
+body.dark .navigation {
+  background-color: var(--mui-palette-background-default);
+}
+
+body:not(.dark) .singularity-list-item {
+  background-color: transparent;
+}
+body.dark .singularity-list-item {
+  background-color: transparent;
+}
+
+body:not(.dark) .navigation .singularity-list-item-text-primary {
+  color: var(--mui-palette-text-primary);
+}
+body.dark .navigation .singularity-list-item-text-primary {
+  color: var(--mui-palette-text-primary);
+}
+
+body:not(.dark) .navigation .singularity-list-item.active {
+  background-color: var(--mui-palette-grey-300);
+}
+body.dark .navigation .singularity-list-item.active {
+  background-color: var(--mui-palette-grey-800);
+}
+
+body:not(.dark) {
+  --nav-hover-bg: var(--mui-palette-primary-light);
+  --nav-hover-text: var(--mui-palette-text-primary);
+}
+body.dark {
+  --nav-hover-bg: var(--mui-palette-primary-dark);
+  --nav-hover-text: var(--mui-palette-text-primary);
+}
+.singularity-list-item:hover {
+  background-color: transparent;
+}
+.singularity-list-item:hover .singularity-list-item-text-primary {
+  color: var(--nav-hover-text);
+}
+
+body:not(.dark) .navigation .MuiIconButton-root,
+body:not(.dark) .navigation .shortcut-icon,
+body:not(.dark) .navigation .SingularitySvgIcon,
+body:not(.dark) .navigation .SingularitySvgIcon svg {
+  color: var(--mui-palette-primary-main);
+  fill: var(--mui-palette-primary-main);
+  stroke: var(--mui-palette-primary-main);
+}
+body.dark .navigation .MuiIconButton-root,
+body.dark .navigation .shortcut-icon,
+body.dark .navigation .SingularitySvgIcon,
+body.dark .navigation .SingularitySvgIcon svg {
+  color: var(--mui-palette-primary-light);
+  fill: var(--mui-palette-primary-light);
+  stroke: var(--mui-palette-primary-light);
+  opacity: 0.6;
+}
+
+body:not(.dark) .user-menu,
+body:not(.dark) .MuiPaper-root {
+  background-color: var(--mui-palette-background-paper);
+  color: var(--mui-palette-text-primary);
+}
+body.dark .user-menu,
+body.dark .MuiPaper-root {
+  background-color: var(--mui-palette-background-paper);
+  color: var(--mui-palette-text-primary);
+}
+body:not(.dark) .user-menu .title,
+body:not(.dark) .user-menu .subtitle {
+  color: var(--mui-palette-text-primary);
+}
+body.dark .user-menu .title,
+body.dark .user-menu .subtitle {
+  color: var(--mui-palette-text-primary);
+}
+
+body:not(.dark) .documentation-hero {
+  color: var(--mui-palette-text-primary);
+}
+body.dark .documentation-hero {
+  color: var(--mui-palette-text-primary);
+}
+
+body:not(.dark) .MuiIconButton-root {
+  background-color: inherit;
+  color: var(--mui-palette-text-primary);
+}
+body.dark .MuiIconButton-root {
+  background-color: inherit;
+  color: var(--mui-palette-text-primary);
+}
+body:not(.dark) .MuiIconButton-root:hover,
+body.dark .MuiIconButton-root:hover {
+  background-color: inherit;
+}
+
+body:not(.dark) .github-issues-new {
+  background-color: var(--mui-palette-primary-light);
+  color: var(--mui-palette-text-primary);
+}
+body.dark .github-issues-new {
+  background-color: var(--mui-palette-primary-dark);
+  color: var(--mui-palette-text-primary);
+}
+body:not(.dark) .github-issues-closed {
+  background-color: var(--mui-palette-success-light);
+  color: var(--mui-palette-text-primary);
+}
+body.dark .github-issues-closed {
+  background-color: var(--mui-palette-success-dark);
+  color: var(--mui-palette-text-primary);
+}
+
+body:not(.dark) .shortcut-icon {
+  color: var(--mui-palette-text-primary);
+}
+body.dark .shortcut-icon {
+  color: var(--mui-palette-text-primary);
+}
+
+body:not(.dark) .navigation .singularity-list-subheader-text .MuiListItemText-primary {
+  color: var(--mui-palette-text-primary);
+}
+body.dark .navigation .singularity-list-subheader-text .MuiListItemText-primary {
+  color: var(--mui-palette-text-primary);
+}
+body:not(.dark) .navigation .singularity-list-subheader-text .MuiListItemText-secondary {
+  color: var(--mui-palette-primary-main);
+}
+body.dark .navigation .singularity-list-subheader-text .MuiListItemText-secondary {
+  color: var(--mui-palette-grey-400);
+}
+
+body:not(.dark) .footer-popover {
+  background-color: var(--mui-palette-background-paper);
+}
+body:not(.dark) .footer-popover.MuiPaper-root {
+  background-color: var(--mui-palette-background-paper);
+}
+body.dark .footer-popover {
+  background-color: var(--mui-palette-background-paper);
+}
+body:not(.dark) .footer-popover.light-mode-fix {
+  background-color: var(--mui-palette-background-paper);
+}
+body:not(.dark) .footer-popover-content .MuiMenuItem-root {
+  background-color: transparent;
+  color: var(--mui-palette-text-primary);
+}
+body.dark .footer-popover-content .MuiMenuItem-root {
+  background-color: transparent;
+  color: var(--mui-palette-text-primary);
+}
+body:not(.dark) .footer-popover-content .MuiMenuItem-root:hover {
+  background-color: var(--mui-palette-secondary-main);
+}
+body.dark .footer-popover-content .MuiMenuItem-root:hover {
+  background-color: var(--mui-palette-secondary-main);
+}
+body:not(.dark) .footer-popover-content .MuiTypography-root {
+  color: var(--mui-palette-text-primary);
+}
+body.dark .footer-popover-content .MuiTypography-root {
+  color: var(--mui-palette-text-primary);
+}
+body:not(.dark) .footer-icon-button,
+body:not(.dark) .footer-icon-button svg {
+  color: var(--mui-palette-text-primary);
+  stroke: var(--mui-palette-text-primary);
+  background-color: inherit;
+}
+body.dark .footer-icon-button,
+body.dark .footer-icon-button svg {
+  color: var(--mui-palette-text-primary);
+  stroke: var(--mui-palette-text-primary);
+  background-color: inherit;
+}
+body:not(.dark) .footer-icon-button:hover,
+body.dark .footer-icon-button:hover {
+  background-color: inherit;
+}
+body:not(.dark) .footer-popover-content .MuiListItemIcon-root,
+body:not(.dark) .footer-popover-content .MuiListItemIcon-root svg {
+  color: var(--mui-palette-text-primary);
+  stroke: var(--mui-palette-text-primary);
+}
+body.dark .footer-popover-content .MuiListItemIcon-root,
+body.dark .footer-popover-content .MuiListItemIcon-root svg {
+  color: var(--mui-palette-text-primary);
+  stroke: var(--mui-palette-text-primary);
+}
+
+body:not(.dark) .user-menu-popover.MuiPaper-root {
+  background-color: var(--mui-palette-grey-100);
+  color: var(--mui-palette-text-primary);
+}
+body.dark .user-menu-popover.MuiPaper-root {
+  background-color: var(--mui-palette-background-paper);
+  color: var(--mui-palette-text-primary);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar:hover {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  border-radius: 20px;
+}
+
+body:not(.dark) .orders-table-container {
+  background-color: var(--mui-palette-background-paper);
+}
+body.dark .orders-table-container {
+  background-color: var(--mui-palette-background-default);
+}
+
+.singularity-list-item {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.singularity-list-item-icon {
+  transition: stroke 0.3s ease, color 0.3s ease;
+}
+
+.singularity-toolbar .MuiListItem-root {
+  padding: 4px 8px;
+  margin: 4px 0;
+  min-height: auto;
+}
+
+.singularity-toolbar .MuiListItemIcon-root {
+  min-width: 36px;
+  height: 36px;
+  margin: 0 auto 4px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--mui-palette-primary-main, #1C1C1C);
+}
+
+html[data-mui-color-scheme="dark"] .singularity-toolbar .MuiListItemIcon-root {
+  color: var(--mui-palette-primary-contrastText, #FFFFFF);
+}
+
+.singularity-toolbar .MuiListItemIcon-root svg {
+  width: 20px;
+  height: 20px;
+  image-rendering: crisp-edges;
+}
+
+body:not(.dark) .MuiMenu-paper {
+  background-color: var(--mui-palette-background-paper);
+}
+
+body:not(.dark) .MuiMenu-paper .MuiMenuItem-root,
+body:not(.dark) .MuiMenu-paper .MuiListItemText-primary,
+body:not(.dark) .MuiMenu-paper .MuiListItemIcon-root {
+  color: var(--mui-palette-text-primary);
+}
+
+body.dark .navigation .singularity-list-item.active {
+  background-color: var(--mui-palette-primary-main);
+  color: var(--mui-palette-common-white);
+}
+
+body.dark .active-button,
+body.dark .MuiButton-root.active,
+body.dark .MuiMenuItem-root.active,
+body.dark .singularity-list-item.active {
+  background-color: var(--mui-palette-primary-main);
+  color: var(--mui-palette-common-white);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark .navigation {
+  background-color: transparent;
+}
+
+body.dark .user-menu-popover .MuiMenuItem-root:hover,
+body.dark .footer-popover-content .MuiMenuItem-root:hover {
+  background-color: var(--mui-palette-secondary-main);
+  color: var(--mui-palette-common-white);
+}
+
+.navigation svg,
+.navigation .MuiSvgIcon-root,
+.navigation .SingularitySvgIcon svg,
+.navigation .shortcut-icon svg,
+.singularity-list-item-icon svg,
+.heroicons-outline svg,
+.heroicons-solid svg {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
+  image-rendering: pixelated !important;
+  shape-rendering: geometricPrecision !important;
+  vector-effect: non-scaling-stroke !important;
+  font-size: 1.25rem !important;
+}
+
+.MuiSvgIcon-root {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
+  image-rendering: pixelated !important;
+  shape-rendering: geometricPrecision !important;
+  vector-effect: non-scaling-stroke !important;
+  font-size: 1.25rem !important;
+}
+
+* svg {
+  vector-effect: non-scaling-stroke !important;
+  image-rendering: pixelated !important;
+}

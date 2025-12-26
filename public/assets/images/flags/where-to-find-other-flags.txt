@@ -1,0 +1,5 @@
+### Main repository of flags ###
+https://github.com/Yummygum/flagpack-core
+
+### Singularity uses the medium (m) detailed SVGs which are located here ###
+https://github.com/Yummygum/flagpack-core/tree/main/svg/m

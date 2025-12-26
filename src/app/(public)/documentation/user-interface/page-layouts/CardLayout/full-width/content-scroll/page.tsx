@@ -1,0 +1,3 @@
+import CardLayoutFullWidthContentScrollComponent from './CardLayoutFullWidthContentScrollComponent';
+
+export default CardLayoutFullWidthContentScrollComponent;
